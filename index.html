@@ -10,29 +10,21 @@
     <title>Google</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li class="links">
-                <a href="">Gmail</a>
-            </li>
-            <li class="links">
-                <a href="">Images</a>
-            </li>
-            <li class="links lnk-1">
-                <a href="">
-                    <i style="color: #5F6368;" class="material-icons">
+    <nav>    
+        <div class="links">
+            <a href="">Gmail</a>
+            <a href="">Images</a>
+            <a href="" class="link-icon">
+                <i style="color: #5F6368;" class="material-icons">
                         apps
-                    </i>
-                </a>    
-            </li>
-            <li class="links lnk-1">
-                <a href="">
-                    <i class="material-icons">
-                        account_circle
-                    </i>
-                </a>      
-            </li>
-        </ul>
+                </i>
+            </a>    
+            <a href="" class="link-icon">
+                <i class="material-icons">
+                    account_circle                    
+                </i>
+            </a>      
+        </div>
     </nav>
     <section id="search">
         <div class="image">
@@ -40,7 +32,7 @@
         </div>
         <div class="form">
             <i class="material-icons" id="search-btn">search</i>
-            <input type="search" id="search-box">
+            <input type="search" id="search-box" value="            ">
             <svg style="width: 24px;" class="microphone" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z" fill="#4285f4"></path><path d="m11 18.08h2v3.92h-2z" fill="#34a853"></path><path d="m7.05 16.87c-1.27-1.33-2.05-2.83-2.05-4.87h2c0 1.45 0.56 2.42 1.47 3.38v0.32l-1.15 1.18z" fill="#f4b400"></path><path d="m12 16.93a4.97 5.25 0 0 1 -3.54 -1.55l-1.41 1.49c1.26 1.34 3.02 2.13 4.95 2.13 3.87 0 6.99-2.92 6.99-7h-1.99c0 2.92-2.24 4.93-5 4.93z" fill="#ea4335"></path>
             </svg>
         </div>
@@ -64,7 +56,18 @@
         <div class="privacy">
             <a href="https://policies.google.com/privacy?hl=en-TR&fg=1">Privacy</a>
             <a href="https://policies.google.com/terms?hl=en-TR&fg=1">Terms</a>
-            <a href="">Settings</a>
+   
+            <div class="dropdown">
+                <a href="">Settings</a>
+                <div class="dropdown-content">
+                  <a href="https://www.google.com/preferences?hl=en-TR&fg=1">Search settings</a>
+                  <a href="https://www.google.com/advanced_search?hl=en-TR&fg=1">Advanced search</a>
+                  <a href="https://myactivity.google.com/privacyadvisor/search?utm_source=googlemenu&fg=1">Your data in search</a>
+                  <a href="https://myactivity.google.com/product/search?utm_source=google&hl=en-TR&fg=1">Search history</a>
+                  <a href="https://support.google.com/websearch/?p=ws_results_help&hl=en-TR&fg=1">Search help</a>
+                  <a href="#">Send feedback</a>
+                </div>
+              </div>
         </div>
         </div>
     </footer>
