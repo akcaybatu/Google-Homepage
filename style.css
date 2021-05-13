@@ -2,10 +2,22 @@
     font-family: arial,sans-serif;
 }
 
-body{
+body, html{
+    width: 100%;
     margin: 0;
+    padding: 0;
 }
 
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover{
+    border-bottom: 1px solid #000;
+}
+
+/*navigation area*/
 nav{
     list-style: none;
     display: flex;
@@ -24,32 +36,77 @@ nav{
     position: relative;
     top: 7px;
 }
+/*navigation area*/
 
-a{
-    text-decoration: none;
-    list-style: none;
-}
-
-a:hover{
-    border-bottom: 1px solid #000;
+/*google search area*/
+#search{
+    margin-top: 200px;
 }
 
 section div{
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-#search{
-    margin-top: 200px;
+.buttons{
+    margin-top: 50px;
+}
+
+.form{
+    position: relative;
+}
+
+#search-box{
+    border: 1px solid #e4dede;
+    border-radius: 100px;
+    width: 580px;
+    height: 45px;
+    outline: 0;
+    position: absolute;
+    transition: all 200ms ease-out;
+    padding-left: 60px;
+}
+
+#search-box:hover{
+    box-shadow: 0 1px 11px rgba(0,0,0,0.2); 
+}
+
+#search-btn{
+    z-index: 1;
+    margin-right: 500px;
+    margin-top: 10px;
+    color: rgb(172, 167, 167);
+    position: absolute;
+}
+
+.microphone{
+    z-index: 1;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 500px;
+}
+
+#btn{
+    padding: 0;
+    border: none;
+    background: none;
+    margin: 20px 20px;
+    font-size: 0.9em;
 }
 
 .country{
     font-size: 0.8em;
 }
+/*google search area*/
 
+/*footer area*/
 footer{
-    margin-top: 300px;
+    color: #6F6F6F;
+    background-color: #f1f1f1;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
     color: #6F6F6F;
     background-color: #f1f1f1;
 }
@@ -71,43 +128,6 @@ footer a{
 footer p{
     padding-top: 10px;
     margin-left: 18px;
-    font-size: 0.9em;
-}
-
-#search-box{
-    border: 1px solid #e4dede;
-    border-radius: 100px;
-    width: 580px;
-    height: 45px;
-    outline: 0;
-    position: absolute;
-    transition: all 200ms ease-out;
-}
-
-input[type="search"]::-webkit-search-cancel-button{
-    -webkit-appearance: none;
-}
-
-#search-btn{
-    z-index: 1;
-    margin-right: 500px;
-    margin-top: 10px;
-}
-
-#search-box:hover{
-    box-shadow: 0 1px 11px rgba(0,0,0,0.2); 
-}
-
-.microphone{
-    z-index: 1;
-    margin-top: 10px;
-}
-
-#btn{
-    padding: 0;
-    border: none;
-    background: none;
-    margin: 20px 20px;
     font-size: 0.9em;
 }
 
@@ -143,80 +163,51 @@ input[type="search"]::-webkit-search-cancel-button{
     bottom: 100%;
     right: 20%;
 }
+/*footer area*/
 
-@media only screen and (min-width: 320px){
-    body{
-        max-width: 100%;
-    }
-    img{
-        width: 200px;
+/*media queries*/
+@media screen and (max-width: 750px) {
+    #search{
+        margin-top: 90px;
     }
     #search-box{
-        width: 300px;
-    }
-    #search{
-        margin-top: 120px;
-    }
+        border: 1px solid #e4dede;
+        border-radius: 100px;
+        width: 320px;
+        height: 45px;
+        outline: 0;
+        position: absolute;
+        transition: all 200ms ease-out;
+        }
     .about{
-        display: inline-flex;
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        line-height: 25px;
+        margin: auto;
+        line-height: 20px;
     }
     .privacy{
-        margin: auto;
-        padding-top: 20px;
-    }
-    #search-btn{
-        color: #000;
-        margin-left: 250px;
-    }
-  }
-
-  @media only screen and (min-width: 768px) and (max-width: 1366px){
-    body{
-        max-width: 100%;
-    }
-    img{
-        width: 300px;
-    }
-    #search-box{
-        width: 600px;
-    }
-    #search{
-        margin-top: 280px;
-    }
-    .about{
-        display: inline-flex;
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        line-height: 25px;
-    }
-    .privacy{
         margin: auto;
-        padding-top: 20px;
     }
-    .info{
-        margin: 0;
+    #search-btn {
+        margin-right: 270px;      
+    }
+    .microphone {
+        margin-left: 270px;
     }
 }
-
-@media only screen and (min-width: 1024px) and (max-width: 1366px){
-    body{
-        max-width: 100%;
-    }
-    img{
-        width: 300px;
-    }
-    #search-box{
-        width: 600px;
-    }
+@media screen and (min-width: 760px) and (max-width: 1024px) {
     #search{
-        margin-top: 400px;
+        margin-top: 90px;
     }
-    footer{
-        margin-top: 510px;
+    .buttons{
+        margin-top: 60px;
+    }
+    .microphone{
+        margin-left: 500px;
     }
 }
-
-
+/*media queries*/
